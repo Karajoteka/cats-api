@@ -81,7 +81,7 @@ async function loadFavouriteMichis() {
 
       buttonImg.style.width = '40px';
       buttonImg.style.height = '40px';
-      buttonImg.style.backgroundImage = 'url(https://i.postimg.cc/HswMYWnc/delete.png)';
+      buttonImg.style.backgroundImage = 'url(../imgs/delete.svg)';
       buttonImg.style.backgroundSize = 'cover';
       buttonImg.style.backgroundPosition = 'center';
       buttonImg.style.backgroundRepeat = 'no-repeat';
