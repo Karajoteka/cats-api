@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/desktop.css" media="(min-width: 1050px)">
+  <title>Lindos Gaticos</title>
+</head>
+<body>
+
+  <main class="container">
+    <h1>Lindos Gaticos</h1>
+
+    <span id="error"></span>
+
+    <section id="randomMichis">
+      <h2>Gaticos aleatorios</h2>
+
+      <div class="images-container">
+        <article class="random-images">
+          <img id="img1" alt="Foto gatito aleatorio">
+          <button class="add-to-favourites" id="btn1"></button>
+        </article>
+
+        <article class="random-images">
+          <img id="img2" alt="Foto gatito aleatorio">
+          <button class="add-to-favourites" id="btn2"></button>
+        </article>
+      </div>
+        
+      <button class="reload" onclick="loadRandomMichis()">Recargar</button>
+    </section>
+
+    <section id="uploadingMichi">
+      <h2>Sube la foto de tu gatico</h2>
+      <form id="uploadingForm" action="">
+        <input id="file" type="file" name="file" onchange="showMiniature()">
+        <button type="button" onclick="uploadMichiPhoto()">Subir gatico</button>
+      </form>
+    </section>
+
+    <h2>Mis gaticos favoritos</h2>
+    <section id="favouriteMichis">
+      <div class="favourite-images">
+          <article>
+            <img alt="Foto gatito aleatorio">
+            <button></button>
+          </article>
+      </div>
+
+
+
+    </section>
+  </main>
+  
+
+  <script src="./main.js"></script>
+</body>
+</html>

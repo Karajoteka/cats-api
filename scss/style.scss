@@ -1,0 +1,162 @@
+$font-stack: 'Pangolin', cursive;
+$very-dark-blue: #222831;
+$dark-grey: #393E46;
+$blue: #00ADB5;
+$very-light-grey: #EEEEEE;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-stack;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $very-dark-blue;
+  color: $very-light-grey;
+}
+
+.container {
+  width: 375px;
+  padding: 20px;
+
+  h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  #randomMichis {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: $dark-grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+
+    h2 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .random-images {
+      position: relative;
+
+      img {
+        width: 280px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        &:hover {
+          border: 3px solid $blue;
+        }
+      }
+
+      .add-to-favourites {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        background-image: url(../imgs/heart.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        transition: transform 0.3s ease-in-out;
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.1);
+        }
+        &:active {
+          transform: scale(0.9);
+        }
+      }  
+    }
+
+    .reload {
+      margin-bottom: 20px;
+      width: 100px;
+      height: 30px;
+      border: none;
+      border-radius: 10px;
+      background-color: $blue;
+      color: $very-dark-blue;
+      font-family: $font-stack;
+      font-size: 1.5rem;
+      transition: transform 0.3s ease-in-out;
+      &:hover {
+        cursor: pointer;
+      }
+      &:active {      
+        transform: scale(0.8);
+      }
+    }
+  }
+
+  #uploadingMichi {
+    @extend #randomMichis;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      input {
+        width: 300px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 10px;
+        background-color: $blue;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      #preview {
+        width: 50px;
+        border-radius: 100%;
+      }
+
+      button {
+        @extend .reload;
+        width: 100px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  #favouriteMichis {
+    @extend #randomMichis;
+
+    article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &:nth-child(1) {
+        margin-top: 30px;
+      }
+    }
+  }
+}
